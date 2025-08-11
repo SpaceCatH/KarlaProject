@@ -1,0 +1,183 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashland Blinds Order Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="form-card">
+        <img
+  src="https://www.ashlandblinds.com/wp-content/uploads/2022/02/AshlandBlinds_Horz_Color.svg"
+  alt="Ashland Blinds Logo"
+  style="width: 150px; height: auto; display: block; margin-left: 0;">
+        <br><br>
+      <h1>Ashland Blinds Order Form</h1>
+      <p class="intro">
+        Thank you for choosing Ashland Blinds—where European craftsmanship meets American homes. We specialize in premium window treatments designed specifically for tilt & turn windows, folding doors, and sliding doors. Every order is custom-made to ensure a perfect fit and exceptional quality.
+        <br><br>
+        To get started, please follow the in-home measurement instructions carefully. Precision matters, and we’re here to help you get it right. Once you've entered your order details below, we’ll begin crafting your blinds. You’ll receive a confirmation email once your order has been processed.</p>
+        </p>
+        <p><b>***Placeholder for instructions***</b></p>
+        <br><br>
+
+      <!-- Step 1: Add Room -->
+      <div id="step-room">
+        <label>Room Name</label>
+        <input type="text" id="roomName" />
+        <button onclick="startRoom()">Add Room</button>
+      </div>
+
+      <!-- Step 2: Add Windows -->
+      <div id="step-windows" style="display:none;">
+        <h2 id="currentRoomHeader"></h2>
+        <form id="windowForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Style</label>
+              <select class="form-field" name="style" required>
+                <option value="">Select</option>
+                <option value="Single Pleat">Single Pleat</option>
+                <option value="Honeycomb">Honeycomb</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Opacity</label>
+              <select class="form-field" name="opacity" required>
+                <option value="">Select</option>
+                <option value="Light Filtering">Light Filtering</option>
+                <option value="Blackout">Blackout</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Fabric</label>
+              <select class="form-field" name="fabric" required>
+                <option value="">Select</option>
+                <option value="Albedo Duo AD 1">Albedo Duo AD 1</option>
+                <option value="Albedo Duo AD 10">Albedo Duo AD 10</option>
+                <option value="Albedo Duo AD 100">Albedo Duo AD 100</option>
+                <option value="Albedo Duo AD 250">Albedo Duo AD 250</option>
+                <option value="Albedo Duo AD 500">Albedo Duo AD 500</option>
+                <option value="Albedo Duo AD 650">Albedo Duo AD 650</option>
+                <option value="Albedo Duo BO AD 300">Albedo Duo BO AD 300</option>
+                <option value="Albedo Duo BO AD 400">Albedo Duo BO AD 400</option>
+                <option value="Allegro">Allegro</option>
+                <option value="Allegro Flex">Allegro Flex</option>
+                <option value="Blackout ALU PBA 10">Blackout ALU PBA 10</option>
+                <option value="Blackout PBO 950">Blackout PBO 950</option>
+                <option value="Opal P 100">Opal P 100</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label>Color</label>
+              <select class="form-field" name="color" required>
+                <option value="">Select</option>
+                <option value="0460">0460</option>
+<option value="7234">7234</option>
+<option value="AD 01">AD 01</option>
+<option value="AD 05">AD 05</option>
+<option value="AD 07">AD 07</option>
+<option value="AD 08">AD 08</option>
+<option value="AD 106">AD 106</option>
+<option value="AD 15">AD 15</option>
+<option value="AD 251">AD 251</option>
+<option value="AD 252">AD 252</option>
+<option value="AD 255">AD 255</option>
+<option value="AD 256">AD 256</option>
+<option value="AD 301">AD 301</option>
+<option value="AD 303">AD 303</option>
+<option value="AD 305">AD 305</option>
+<option value="AD 312">AD 312</option>
+<option value="AD 313">AD 313</option>
+<option value="AD 401">AD 401</option>
+<option value="AD 402">AD 402</option>
+<option value="AD 404">AD 404</option>
+<option value="AD 406">AD 406</option>
+<option value="AD 526">AD 526</option>
+<option value="AD 535">AD 535</option>
+<option value="AD 651">AD 651</option>
+<option value="AD 653">AD 653</option>
+<option value="AD03">AD03</option>
+<option value="AF02">AF02</option>
+<option value="AF04">AF04</option>
+<option value="AF14">AF14</option>
+<option value="AF18">AF18</option>
+<option value="AF25">AF25</option>
+<option value="P 101">P 101</option>
+<option value="P 119">P 119</option>
+<option value="P 120">P 120</option>
+<option value="PBA 4">PBA 4</option>
+<option value="PBA 5">PBA 5</option>
+<option value="PBO 951">PBO 951</option>
+<option value="PBO 952">PBO 952</option>
+<option value="PBO 953">PBO 953</option>
+<option value="PBO 958">PBO 958</option>
+<option value="PBO 959">PBO 959</option>
+<option value="PBO 960">PBO 960</option>
+<option value="PBO 962">PBO 962</option>
+<option value="PBO 966">PBO 966</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+              <label>Height (inches)</label>
+              <input class="form-field" type="number" name="height" step="0.125" required />
+            </div>
+            <div class="form-group">
+              <label>Width (inches)</label>
+              <input class="form-field" type="number" name="width" step="0.125" required />
+            </div>
+            <div class="form-group">
+              <label>Rail Color</label>
+              <select class="form-field" name="railColor" required>
+                <option value="">Select</option>
+                <option value="Cream">Cream</option>
+<option value="Silver">Silver</option>
+<option value="Czarny">Czarny</option>
+<option value="White">White</option>
+<option value="Brown">Brown</option>
+<option value="Srebrny">Srebrny</option>
+<option value="Antracyt">Antracyt</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+              <label>Quantity</label>
+              <input class="form-field" type="number" name="quantity" step="1" required />
+            </div>
+            <div class="form-group">
+              <label>Price (USD)</label>
+              <input class="form-field" type="text" name="price" required />
+            </div>
+          </div>
+          <button type="submit">Save Window</button>
+        </form>
+        <button onclick="finishRoom()">Finish Room</button>
+      </div>
+
+      <!-- Windows by Room Summary -->
+<div id="roomSummarySection" style="display: none;">
+  <h3>Windows in this Room</h3>
+  <table id="roomSummaryTable"></table>
+</div>
+
+      <!-- Step 3: Summary -->
+      <div id="step-summary" style="display:none;">
+        <h2>Order Summary</h2>
+        <table id="summaryTable"></table>
+        <p id="totalPrice"></p>
+        <button onclick="submitOrder()">Submit Order</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
